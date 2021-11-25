@@ -1,0 +1,9 @@
+language: python
+python:
+  - 3.8
+install:
+#  - pip install -q -r requiriments-dev.txt codecov
+script:
+  - flake8
+after_success:
+  - codecov
