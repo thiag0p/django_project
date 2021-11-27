@@ -3,7 +3,7 @@ dist: xenial
 sudo: true
 
 python:
-  - 3.6.14
+  - 3.6
 
 env:
   global:
