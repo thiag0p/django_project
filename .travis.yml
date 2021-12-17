@@ -14,4 +14,7 @@ install:
   - pipenv sync -d
 script:
   - pipenv run flake8 .
-  - pipenv run pytest
+  - pipenv run pytest --cov=django_project
+
+after_success:
+  - pipenv run codecov
