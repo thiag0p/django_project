@@ -32,8 +32,8 @@ ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
 
 AUTH_USER_MODEL = 'base.User'
 
-STATICFILES_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
-COLLECTFAST_STRATEGY = "collectfast.strategies.boto3.Boto3Strategy"
+# STATICFILES_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
+# COLLECTFAST_STRATEGY = "collectfast.strategies.boto3.Boto3Strategy"
 # Application definition
 
 INSTALLED_APPS = [
@@ -78,7 +78,7 @@ TEMPLATES = [
 WSGI_APPLICATION = 'django_project.wsgi.application'
 
 # Configuração Django Debug Toolbar
-INTERRNAL_IPS = config('INTERNAL_IPS', cast=Csv(), default='127.0.0.1')
+INTERNAL_IPS = config('INTERNAL_IPS', cast=Csv(), default='127.0.0.1')
 
 if DEBUG:  # pragma: no cover
     INSTALLED_APPS.append('debug_toolbar')
