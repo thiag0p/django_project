@@ -80,7 +80,7 @@ WSGI_APPLICATION = 'django_project.wsgi.application'
 # Configuração Django Debug Toolbar
 INTERRNAL_IPS = config('INTERNAL_IPS', cast=Csv(), default='127.0.0.1')
 
-if DEBUG:
+if DEBUG:  # pragma: no cover
     INSTALLED_APPS.append('debug_toolbar')
     MIDDLEWARE.insert(0, 'debug_toolbar.middleware.DebugToolbarMiddleware')
 # Database
