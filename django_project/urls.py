@@ -17,11 +17,9 @@ from django.conf import settings
 from django.contrib import admin
 from django.urls import path, include
 
-from django_project.base.views import home
-
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', home),
+    path('', include('django_project.base.urls')),
 ]
 
 if settings.DEBUG:  # pragma: no cover
